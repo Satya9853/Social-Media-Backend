@@ -31,10 +31,10 @@ app.use(cors());
 app.use(xss());
 
 // Route Middlewares
-app.use("/api/v1/", authRouter);
+app.use("/api/", authRouter);
 app.use(authMiddleware);
-app.use("/api/v1", userRouter);
-app.use("/api/v1/", postRouter);
+app.use("/api/", userRouter);
+app.use("/api/", postRouter);
 
 /// error handling middleware
 app.use(notFoundMiddleware);
